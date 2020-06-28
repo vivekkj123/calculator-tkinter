@@ -8,6 +8,7 @@ window.title("Calculator By Vivek K J")
 screen = Entry(window, textvariable=window, font=("Courier", 35,), bd=12,
                insertwidth=4, width=12, justify=RIGHT, bg='#fff')
 screen.grid(columnspan=4, pady=10)
+screen.focus()
 
 button7 = Button(window, text='7', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4", activebackground="#ff6f61", command=lambda:setInput("7"))
 button8 = Button(window, text='8', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4", activebackground="#ff6f61",command=lambda:setInput("8"))
@@ -45,7 +46,8 @@ button1.grid(row=4, column=0, pady=30)
 button2.grid(row=4, column=1, pady=30)
 button3.grid(row=4, column=2, pady=30)
 
-
+window.bind('<Return>', lambda event: equals(str(eval(screen.get()))))
+window.bind('<KP_Enter>', lambda event: equals(str(eval(screen.get()))))
 def setInput(text):
     screen.insert(30, text)
 

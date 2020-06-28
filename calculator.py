@@ -18,7 +18,7 @@ button1 = Button(window, text='1', height=2, width=4, command=lambda:setInput("1
 button2 = Button(window, text='2', height=2, width=4, command=lambda:setInput("2"))
 button3 = Button(window, text='3', height=2, width=4, command=lambda:setInput("3"))
 button0 = Button(window, text='0', height=2, width=4, command=lambda:setInput("0"))
-buttonequal = Button(window, text='=', height=2, width=4, command=lambda:setInput("="))
+buttonequal = Button(window, text='=', height=2, width=4, command=lambda:equals(str(eval(screen.get()))))
 buttonmultiple = Button(window, text='*', height=2, width=4, command=lambda:setInput("*"))
 buttonaddition = Button(window, text='+', height=2, width=4, command=lambda:setInput("+"))
 buttonminus = Button(window, text='-', height=2, width=4, command=lambda:setInput("-"))
@@ -50,5 +50,11 @@ def setInput(text):
 
 def clearfun(text):
     screen.delete(0, "end")
+
+def equals(text):
+    global evaluate
+    evaluate = eval(text)
+    screen.delete(0, "end")
+    screen.insert(30, evaluate)
 
 mainloop()

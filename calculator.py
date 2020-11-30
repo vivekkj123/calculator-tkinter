@@ -9,44 +9,44 @@ window.title("Calculator By Vivek K J") #Window Title
 icon = PhotoImage(file='logo.png')  #Window Favicon Variable
 window.iconphoto(False, icon)   #Set window icon
 
-screen = Entry(window, textvariable=window, font=("Courier", 35,), bd=12,
+screen = Entry(window, textvariable=window, font=("Courier", 35), bd=12, fg="#000000",
                insertwidth=4, width=12, justify=RIGHT, bg='#fff')   #Screen Of Calculator
 screen.grid(columnspan=4, pady=10)
 screen.focus()  #Set default focus to screen for better entry from keyboard
 if __name__ == '__main__':
-    button7 = Button(window, text='7', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button7 = Button(window, text='7', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("7"))
-    button8 = Button(window, text='8', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button8 = Button(window, text='8', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("8"))
-    button9 = Button(window, text='9', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button9 = Button(window, text='9', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("9"))
-    button4 = Button(window, text='4', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button4 = Button(window, text='4', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("4"))
-    button5 = Button(window, text='5', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button5 = Button(window, text='5', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("5"))
-    button6 = Button(window, text='6', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button6 = Button(window, text='6', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("6"))
-    button1 = Button(window, text='1', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button1 = Button(window, text='1', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("1"))
-    button2 = Button(window, text='2', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button2 = Button(window, text='2', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("2"))
-    button3 = Button(window, text='3', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button3 = Button(window, text='3', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("3"))
-    button0 = Button(window, text='0', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    button0 = Button(window, text='0', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                      activebackground="#ff6f61", command=lambda: setInput("0"))
     buttonequal = Button(window, text='=', height=2, width=4, borderwidth=4, relief="ridge", bg="#ffaa00",
                          activebackground="#ffaa00", command=lambda: equals(str(eval(screen.get()))))
-    buttonmultiple = Button(window, text='*', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    buttonmultiple = Button(window, text='*', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                             activebackground="#ff6f61", command=lambda: setInput("*"))
-    buttonaddition = Button(window, text='+', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    buttonaddition = Button(window, text='+', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                             activebackground="#ff6f61", command=lambda: setInput("+"))
-    buttonminus = Button(window, text='-', height=2, width=4, borderwidth=4, relief="ridge", bg="#7fffd4",
+    buttonminus = Button(window, text='-', height=2, width=4, borderwidth=4, relief="ridge", bg="#424211",
                          activebackground="#ff6f61", command=lambda: setInput("-"))
-    buttondivision = Button(window, text='÷', height=2, width=4, bg="#7fffd4", activebackground="#ff6f61",
+    buttondivision = Button(window, text='÷', height=2, width=4, bg="#424211", activebackground="#ff6f61",
                             command=lambda: setInput("/"))
     buttonclear = Button(window, text='AC', height=2, width=4, bg="#ff0000", activebackground="#ff0000",
                          command=lambda: clearfun(""))
-    buttondot = Button(window, text='.', height=2, width=4, bg="#7fffd4", activebackground="#ff6f61",
+    buttondot = Button(window, text='.', height=2, width=4, bg="#424211", activebackground="#ff6f61",
                        command=lambda: setInput("."))
 
     buttonclear.grid(row=1, column=0, pady=30)      #Grid Setup of buttons
